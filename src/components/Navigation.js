@@ -1,4 +1,6 @@
-import { ethers } from 'ethers'
+import { ethers } from 'ethers';
+import Search from './SearchBar';
+import { SearchBar } from './SearchBar';
 
 const Navigation = ({ account, setAccount }) => {
     const connectHandler = async () => {
@@ -12,11 +14,7 @@ const Navigation = ({ account, setAccount }) => {
             <div className='nav__brand'>
                 <h1>Dappazon</h1>
             </div>
-
-            <input
-                type="text"
-                className="nav__search"
-            />
+      <SearchBar />
 
             {account ? (
                 <button
